@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   B.hpp                                              :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pschmunk <pschmunk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/08 16:56:14 by pschmunk          #+#    #+#             */
-/*   Updated: 2025/09/08 18:01:25 by pschmunk         ###   ########.fr       */
+/*   Created: 2025/09/08 18:13:37 by pschmunk          #+#    #+#             */
+/*   Updated: 2025/09/08 18:41:17 by pschmunk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef B_HPP
-# define B_HPP
+#include "Base.hpp"
 
-# include <iostream>
-# include "Base.hpp"
-
-class B : public Base
-{};
-
-#endif
+int main(void)
+{
+	Base	*ptr = generate();
+	std::cout	<< "pointer identify: " << std::ends;
+	identify(ptr);
+	std::cout	<< "reference identify: " << std::ends;
+	identify(*ptr);
+	delete (ptr);
+	return (0);
+}

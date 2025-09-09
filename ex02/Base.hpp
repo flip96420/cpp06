@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: phillymilly <phillymilly@student.42.fr>    +#+  +:+       +#+        */
+/*   By: pschmunk <pschmunk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/05 19:48:26 by phillymilly       #+#    #+#             */
-/*   Updated: 2025/09/05 19:56:15 by phillymilly      ###   ########.fr       */
+/*   Created: 2025/09/08 16:38:41 by pschmunk          #+#    #+#             */
+/*   Updated: 2025/09/08 17:03:06 by pschmunk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,16 @@
 # define BASE_HPP
 
 # include <iostream>
+# include <cstdlib>
 
 class Base
 {
-	private:
 	public:
-		Base();
-		~Base();
+		virtual ~Base();
 };
+
+Base	*generate(void);
+void	identify(Base *p);
+void	identify(Base &p);
 
 #endif
