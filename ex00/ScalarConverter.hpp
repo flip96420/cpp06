@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pschmunk <pschmunk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: phillymilly <phillymilly@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 18:44:27 by pschmunk          #+#    #+#             */
-/*   Updated: 2025/09/02 20:02:15 by pschmunk         ###   ########.fr       */
+/*   Updated: 2025/09/04 16:09:32 by phillymilly      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@
 # include <string>
 # include <sstream>
 # include <cstdlib>
+# include <iomanip>
+# include <limits>
+# include <cerrno>
 
 typedef enum literalType
 {
@@ -40,7 +43,7 @@ class ScalarConverter
 		static void convert(std::string input);
 };
 
-int	is_ascii(int num);
+int	is_ascii(long num);
 int is_displayable(int c);
 literalType	identify(std::string input);
 

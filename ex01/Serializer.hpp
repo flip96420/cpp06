@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Serializer.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phillymilly <phillymilly@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/01 16:35:00 by pschmunk          #+#    #+#             */
-/*   Updated: 2025/09/03 23:35:37 by phillymilly      ###   ########.fr       */
+/*   Created: 2025/09/05 18:49:18 by phillymilly       #+#    #+#             */
+/*   Updated: 2025/09/05 19:43:40 by phillymilly      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScalarConverter.hpp"
+#ifndef SERIALIZER_HPP
+# define SERIALIZER_HPP
 
-int	main(int ac, char **av)
+# include <iostream>
+# include <stdint.h>
+
+struct	Data
 {
-	if (ac == 2)
-		ScalarConverter::convert(av[1]);
-	else
-	{
-		std::cout << "Insufficient Arguments!" << std::endl;
-		return (1);
-	}
-	return (0);
-}
+	std::string name;
+};
+
+class Serializer
+{
+	private:
+		Serializer();
+		Serializer(const Serializer &copy);
+		Serializer &operator=(const Serializer &copy);
+		~Serializer();
+	public:
+		static uintptr_t serialize(Data *ptr);
+		static Data *deserialize(uintptr_t raw);
+};
+
+#endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pschmunk <pschmunk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: phillymilly <phillymilly@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 18:48:47 by pschmunk          #+#    #+#             */
-/*   Updated: 2025/09/02 19:38:27 by pschmunk         ###   ########.fr       */
+/*   Updated: 2025/09/04 16:15:11 by phillymilly      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

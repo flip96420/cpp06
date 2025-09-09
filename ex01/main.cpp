@@ -5,21 +5,24 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: phillymilly <phillymilly@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/01 16:35:00 by pschmunk          #+#    #+#             */
-/*   Updated: 2025/09/03 23:35:37 by phillymilly      ###   ########.fr       */
+/*   Created: 2025/09/05 19:24:36 by phillymilly       #+#    #+#             */
+/*   Updated: 2025/09/05 19:45:56 by phillymilly      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScalarConverter.hpp"
+#include "Serializer.hpp"
 
-int	main(int ac, char **av)
+int main(void)
 {
-	if (ac == 2)
-		ScalarConverter::convert(av[1]);
-	else
-	{
-		std::cout << "Insufficient Arguments!" << std::endl;
-		return (1);
-	}
+	Data		data;
+	uintptr_t	raw;
+
+	data.name = "test";
+	std::cout	<< data.name << std::endl;
+	std::cout	<< "original address: " << &data << std::endl;
+	raw = Serializer::serialize(&data);
+	std::cout	<< "uniptr: " << raw << std::endl;
+	Data *restored = Serializer::deserialize(raw);
+	std::cout	<< "data: " << restored << std::endl;
 	return (0);
 }

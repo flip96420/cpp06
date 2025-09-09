@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phillymilly <phillymilly@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/01 16:35:00 by pschmunk          #+#    #+#             */
-/*   Updated: 2025/09/03 23:35:37 by phillymilly      ###   ########.fr       */
+/*   Created: 2025/09/05 19:48:26 by phillymilly       #+#    #+#             */
+/*   Updated: 2025/09/05 19:56:15 by phillymilly      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScalarConverter.hpp"
+#ifndef BASE_HPP
+# define BASE_HPP
 
-int	main(int ac, char **av)
+# include <iostream>
+
+class Base
 {
-	if (ac == 2)
-		ScalarConverter::convert(av[1]);
-	else
-	{
-		std::cout << "Insufficient Arguments!" << std::endl;
-		return (1);
-	}
-	return (0);
-}
+	private:
+	public:
+		Base();
+		~Base();
+};
+
+#endif

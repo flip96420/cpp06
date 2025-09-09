@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   identify.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: pschmunk <pschmunk@student.42.fr>          +#+  +:+       +#+        */
+/*   By: phillymilly <phillymilly@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/02 17:41:21 by pschmunk          #+#    #+#             */
-/*   Updated: 2025/09/02 18:38:25 by pschmunk         ###   ########.fr       */
+/*   Updated: 2025/09/04 15:40:06 by phillymilly      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
 
-int	is_ascii(int num)
+int	is_ascii(long num)
 {
-	if (num > 127)
+	if (num < 0 || num > 127)
 		return (0);
 	return (1);
 }
@@ -22,14 +22,14 @@ int	is_ascii(int num)
 int is_displayable(int c)
 {
 	if (c > 32 && c < 127)
-	return (1);
+		return (1);
 	return (0);
 }
 
 int	is_char(const std::string input)
 {
 	if ((input[0] < '0' || input[0] > '9') && input[1] == '\0')
-	return (1);
+		return (1);
 	return (0);
 }
 
