@@ -6,7 +6,7 @@
 /*   By: pschmunk <pschmunk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 16:49:57 by pschmunk          #+#    #+#             */
-/*   Updated: 2025/09/08 18:27:28 by pschmunk         ###   ########.fr       */
+/*   Updated: 2025/09/10 17:10:21 by pschmunk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ void	identify(Base &p)
 		dynamic_cast<A&>(p);
 		std::cout	<< "A" << std::endl;
 	}
-	catch(const std::exception& e)
+	catch(std::exception& e)
 	{
 	}
 	try
@@ -67,7 +67,7 @@ void	identify(Base &p)
 		dynamic_cast<B&>(p);
 		std::cout	<< "B" << std::endl;
 	}
-	catch(const std::exception& e)
+	catch(std::exception& e)
 	{
 	}
 	try
@@ -75,7 +75,7 @@ void	identify(Base &p)
 		dynamic_cast<C&>(p);
 		std::cout	<< "C" << std::endl;
 	}
-	catch(const std::exception& e)
+	catch(std::exception& e)
 	{
 	}
 	
