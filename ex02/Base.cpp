@@ -6,7 +6,7 @@
 /*   By: pschmunk <pschmunk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/08 16:49:57 by pschmunk          #+#    #+#             */
-/*   Updated: 2025/09/10 17:10:21 by pschmunk         ###   ########.fr       */
+/*   Updated: 2025/10/06 14:54:01 by pschmunk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ void	identify(Base &p)
 	}
 	catch(std::exception& e)
 	{
+		std::cout << e.what() << std::endl;
 	}
 	try
 	{
@@ -69,6 +70,7 @@ void	identify(Base &p)
 	}
 	catch(std::exception& e)
 	{
+		std::cout << e.what() << std::endl;
 	}
 	try
 	{
@@ -77,6 +79,7 @@ void	identify(Base &p)
 	}
 	catch(std::exception& e)
 	{
+		std::cout << e.what() << std::endl;
 	}
 	
 }

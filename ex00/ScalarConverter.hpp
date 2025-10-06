@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: phillymilly <phillymilly@student.42.fr>    +#+  +:+       +#+        */
+/*   By: pschmunk <pschmunk@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/26 18:44:27 by pschmunk          #+#    #+#             */
-/*   Updated: 2025/09/04 16:09:32 by phillymilly      ###   ########.fr       */
+/*   Updated: 2025/10/06 14:50:43 by pschmunk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ class ScalarConverter
 		static void convert(std::string input);
 };
 
-int	is_ascii(long num);
-int is_displayable(int c);
+int			is_ascii(long num);
+int 		is_displayable(int c);
 literalType	identify(std::string input);
 
 void	print_conversions(const std::string chr, const std::string in, const std::string fl, const std::string db);
